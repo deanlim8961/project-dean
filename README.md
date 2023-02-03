@@ -1,38 +1,81 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Front-End Project
+
+Nextjs 13 기반으로 프로젝트를 개발
+
+### Built With
+
+이 프로젝트는 다음과 같은 기술스택으로 구성되어 있습니다.
+
+- [Next.js](https://nextjs.org/)
+- [React.js](https://reactjs.org/)
+- [yarn](https://yarnpkg.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [ESLint](https://eslint.org/)
+
 
 ## Getting Started
 
-First, run the development server:
+다음은 local 개발환경에서 프로젝트를 설정하는 방법을 설명합니다.
+
+### Prerequisites
+
+이 프로젝트는 node.js와 yarn package manager가 설치되어 있어야 합니다.<br />
+mac을 개발도구로 사용하고 있어서 모두 mac 기준으로 설명합니다.<br /><br />
+homebrew를 사용하여 설치해 줍니다.<br />
+
+- node.js
+
+  ```sh
+  brew install node
+
+  ```
+
+- yarn
+  ```sh
+  brew install yarn --ignore-dependencies
+  ```
+
+위에서 node를 설치해 줬기 때문에 node를 제외하고 설치합니다.
+<br />
+<br />
+
+### 🛠️ Installation Steps
+
+1. 저장소 복사
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+git clone https://github.com/deanlim8961/project-dean.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. working directory로 이동
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```bash
+cd project-dean
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+3. Install dependencies - yarn 패키지 설치 (yarn berry 3.2.2)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```bash
+yarn install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+4. app 실행
 
-## Learn More
+```bash
+yarn dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+# 📁 Folder Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+A quick look at the directories you'll see in this project.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Root driectory layout
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+    .
+    ├── components          # common, 각 page component
+    ├── core                # configs, hooks, redux, utils
+    ├── interfaces          # interface 선언
+    ├── pages               # page 구성
+    ├── public              # 파일 (svg, png...)
+    ├── styles              # css
+    └── ...
